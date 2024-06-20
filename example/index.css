@@ -1,5 +1,9 @@
 @layer base, rhythm, layout, components, default, overwrites;
 
+:root {
+    --nav-width: 7rem;
+}
+
 html {
   /* Create a snapping rule on the html element */
   scroll-snap-type: y mandatory;
@@ -75,6 +79,7 @@ main {
   animation: indicate linear both;
   animation-timeline: --main;
   animation-range: contain;
+  left: 5px;
   top: 4px;
 }
 
@@ -87,6 +92,7 @@ main {
 
   25% {
     --color-indicator: var(--color-yellow);
+    /* transform: translateY(5px); */
   }
 
   50% {
@@ -202,4 +208,20 @@ body:has([value="zoom-scroll"]:checked) .content {
     opacity: 0;
     visibility: hidden;
   }
+}
+
+/*
+--------------------- new stuff ---------------------------
+*/
+
+nav {
+    width: var(--nav-width);
+
+    & li {
+        & a {
+            flex-direction: row;
+            display: flex;
+            align-items: center;
+        }
+    }
 }
