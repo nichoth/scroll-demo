@@ -90,9 +90,13 @@ main {
     transform: translateY(0);
   }
 
-  25% {
+  50% {
+    transform: translateY(45px);
     --color-indicator: var(--color-yellow);
-    /* transform: translateY(5px); */
+  }
+
+  /* 25% {
+    --color-indicator: var(--color-yellow);
   }
 
   50% {
@@ -101,13 +105,11 @@ main {
 
   75% {
     --color-indicator: var(--color-red);
-  }
+  } */
 
   100% {
-    --color-indicator: var(--color-purple);
-    transform: translateY(
-      calc(var(--indicator-total-height) - var(--indicator-size))
-    );
+    --color-indicator: var(--color-secondary);
+    transform: translateY( var(--indicator-total-height) );
   }
 }
 

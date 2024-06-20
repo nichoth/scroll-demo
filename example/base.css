@@ -508,7 +508,7 @@ input {
 }
 
 nav {
-  --indicator-number: 5;
+  --indicator-number: 3;
   --indicator-top: 50dvb;
   --indicator-right: var(--spacing);
 
