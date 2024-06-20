@@ -11,6 +11,9 @@
 
 @layer base {
   :root {
+    /* additions */
+    --nav-width: 28px;
+
     /*
     * Fonts and text
     */
@@ -527,9 +530,10 @@ nav {
     --indicator-padding: 0.25em;
   }
 
+  width: 28px;
   position: fixed;
   inset-block-start: var(--indicator-top);
-  inset-inline-end: var(--indicator-right);
+  /* inset-inline-end: var(--indicator-right); */
   margin-block-start: calc(var(--indicator-total-height) / -2);
   z-index: 100;
 
@@ -578,6 +582,7 @@ nav {
     padding: var(--indicator-padding);
 
     &::before {
+      margin-right: 0.5rem;
       content: '';
       border: 1px solid;
       border-radius: 50%;

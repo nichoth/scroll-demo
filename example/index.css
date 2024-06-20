@@ -43,6 +43,11 @@ main {
 
   animation: blink ease-in-out both;
   animation-timeline: --section;
+
+  & h2 {
+    /* position the title so it doesn't overlap with nav */
+    margin-left: calc(var(--nav-width) + 1rem);
+  }
 }
 
 @keyframes blink {
@@ -70,6 +75,7 @@ main {
   animation: indicate linear both;
   animation-timeline: --main;
   animation-range: contain;
+  top: 4px;
 }
 
 /* And we're manually setting the colors because see: lazy comment above */

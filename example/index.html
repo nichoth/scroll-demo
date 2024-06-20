@@ -36,18 +36,19 @@
 
     <nav>
       <ul class="indicator">
-        <li><a href="#snapping"><span class="sr-only">Snapping</span></a></li>
-        <li><a href="#scrolling"><span class="sr-only">Scrolling</span></a></li>
-        <li><a href="#layout"><span class="sr-only">Layout</span></a></li>
+        <li><a href="#elephant">elephant</a></li>
+        <li><a href="#dog"><span class="sr-only">Scrolling</span></a></li>
+        <li><a href="#cat"><span class="sr-only">Layout</span></a></li>
         <li><a href="#transition"><span class="sr-only">Transition</span></a></li>
         <li><a href="#caveats"><span class="sr-only">Caveats</span></a></li>
       </ul>
     </nav>
   </header>
+
   <main>
-    <section id="snapping" class="section">
+    <section id="elephant" class="section">
       <div class="content">
-        <h2><strong>First</strong>, we set up the <em>snapping</em> points</h2>
+        <h2><strong>Elephant</strong></h2>
 
         <div class="text">
           <img src="https://assets.codepen.io/197359/flower-white.png" alt="">
@@ -57,30 +58,33 @@
         </div>
       </div>
     </section>
-    <section id="scrolling" class="section">
+
+    <section id="dog" class="section">
       <div class="content">
-        <h2><strong>Next</strong>, we set up the <em>scrolling</em> animation</h2>
+        <h2><strong>dog</strong></h2>
 
         <div class="text">
-          <img src="https://assets.codepen.io/197359/flower-yellow.png" alt="">
+          <img src="https://assets.codepen.io/197359/flower-yellow.png" alt="yellow flower">
           <p>We track the <code class="property">view()</code> position of the <code class="selector">section</code> elements using the named timeline <code class="property">view-timeline: --section;</code>. We had previously set the <code class="property">timeline-scope: --section</code> up in our <code class="selector">HTML</code> element, so we can access it from anywhere in the document.</p>
 
           <p>We animate the <code class="selector">.content</code> children using <code class="property">animation-timeline: --section;</code>. The <code class="selector">.content</code> element will now animate based on its parent <code class="selector">section</code>'s position. This is important due to how we're handling the layout in the next section.</p>
         </div>
       </div>
     </section>
-    <section id="layout" class="section">
+
+    <section id="cat" class="section">
       <div class="content">
-        <h2><strong>Then</strong>, we position a <em>fixed</em> layout</h2>
+        <h2><strong>cat</strong></h2>
 
         <div class="text">
-          <img src="https://assets.codepen.io/197359/flower-blue.png" alt="">
+          <img src="https://assets.codepen.io/197359/flower-blue.png" alt="blue flower">
           <p>We set the <code class="selector">.content</code> elements to <code class="property">position: fixed</code>, so they're removed from the normal document flow and stack on top of each other, giving them a solid background, so only one is visible at a time.</p>
 
           <p>Their parent <code class="selector">section</code>s are positioned as normal in the layer below, taking up space, scroll-snapping, and powering the <code class="property">animation-timeline</code>.</p>
         </div>
       </div>
     </section>
+
     <section id="transition" class="section">
       <div class="content">
         <h2><strong>Finally</strong>, we create the <em>transition</em> effects</h2>
@@ -93,6 +97,7 @@
         </div>
       </div>
     </section>
+
     <section id="caveats" class="section">
       <div class="content">
         <h2><strong>Caveats</strong></h2>
@@ -108,7 +113,6 @@
         </div>
       </div>
     </section>
-
   </main>
 
   <footer>
